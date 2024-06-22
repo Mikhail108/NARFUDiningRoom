@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_cafeteria">
+
+    <fragment
+        android:id="@+id/navigation_cafeteria"
+        android:name="ru.narfu.cafeteria.ui.cafeteria.CafeteriaFragment"
+        tools:layout="@layout/fragment_cafeteria" >
+        <action
+            android:id="@+id/action_open_building"
+            app:destination="@id/navigation_building"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_cart"
+        android:name="ru.narfu.cafeteria.ui.cart.CartFragment"
+        tools:layout="@layout/fragment_cart" >
+        <action
+            android:id="@+id/action_open_product"
+            app:destination="@id/navigation_product"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_building"
+        android:name="ru.narfu.cafeteria.ui.building.BuildingFragment"
+        tools:layout="@layout/fragment_building" >
+        <argument
+            android:name="building"
+            app:argType="ru.narfu.cafeteria.db.model.Building" />
+        <action
+            android:id="@+id/action_open_product"
+            app:destination="@id/navigation_product"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_product"
+        android:name="ru.narfu.cafeteria.ui.product.ProductFragment"
+        tools:layout="@layout/item_product">
+        <argument
+            android:name="product"
+            app:argType="ru.narfu.cafeteria.db.model.Product" />
+    </fragment>
+
+</navigation>

@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Столовая</string>
+    <string name="title_cafeteria">Столовая</string>
+    <string name="title_cart">Корзина</string>
+    <string name="title_back">Назад</string>
+    <string name="header_menu">Доступные меню</string>
+    <string name="work_time">с 9 до 16</string>
+    <string name="header_cart">Корзина</string>
+    <string name="price_format">%.0f ₽</string>
+    <string name="button_add">+</string>
+    <string name="button_remove">-</string>
+</resources>
